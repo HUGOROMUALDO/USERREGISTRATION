@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/337be747ec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/mystyle.css">
+    
+   
+
+    <title>Registro de Alumnos</title>
+</head>
+<body>
+    <nav class="menu">
+        <!--add the img-->
+        <img class="logo" src="img/logo_uni2.png" alt="este es el logo" >
+      
+        <div class="login">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="acta.html">Acta de Calificaciones</a>
+              </li>
+          </ul>
+        </div>
+
+    </nav>
+
+   <header class="container">
+        <h1>Bienvenidos al sistema de registro de calificaciones</h1>
+   </header>
+
+   <main class="container">
+    <h2>Registrar nuevo estudiante</h2>
+
+    <div class="formulario" >
+        <!--matricula, nombre, correo, genero, campus, calificacion A, Calificacion C-->
+        <!--<label>Matricula:<input type="text" placeholder="Ingresa la matricula del alumno" id="txtMatricula"></label>-->
+        <div>
+            <label><input class="form-control"  type="text" placeholder="Ingresa el nombre del alumno" id="txtNombre"></label>
+        </div>
+        <div>
+            <label><input class="form-control" type="text" placeholder="Ingresa el correo" id="txtCorreo"></label>
+        </div>
+        <div>
+            <label>
+                <select id="txtGenero" class="form-select" aria-label="Default select example">
+                    <option value="" disabled selected>Selecciona el genero del alumno</option>
+                    <option value="Tijuana">Hombre</option>
+                    <option value="Mexicali">Mujer</option>
+                    <option value="Ensenada">No Definido</option>
+                </select>
+            </label>
+
+        </div>
+        
+        <div>
+            <label>
+                <select id="SelCampus" class="form-select" aria-label="Default select example">
+                    <option value="" disabled selected>Selecciona el campus</option>
+                    <option value="Tijuana">Tijuana</option>
+                    <option value="Mexicali">Mexicali</option>
+                    <option value="Ensenada">Ensenada</option>
+                </select>
+            </label>
+        </div>
+        
+
+        <div>
+            <label><input class="form-control" type="number"  min="1" max="100" placeholder="Ingresa la calificacion A (Valor válido del 0 al 100)" id="numCalA"></label>
+        </div>
+        <div>
+            <label><input class="form-control" type="number" min="1" max="100" placeholder="Ingresa la calificacion B (Valor válido del 0 al 100)" id="numCalB"></label>
+        </div>
+        
+
+    </div>
+    
+
+        <button onclick="registro();" class="btn btn-success">Registrar</button>
+    
+    
+   </main>
+
+   <section class="container" id="tabla">
+        <h2>Lista de estudiantes</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                   <th>Nombre</th>
+                   <th>Correo</th>
+                   <th>Genero</th>
+                   <th>Campus</th>
+                   <th>calificacion A</th>
+                   <th>Calificacion B</th>
+                   <th>Promedio</th>
+                   <th> </th>
+                 </tr>
+              </thead>
+              <tbody id="alumnosTabla">
+                <!--<tr>
+                    <td> ${alumnos[i].nombre}</td>
+                    <td> ${alumnos[i].correo}</td>
+                    <td> ${alumnos[i].genero}</td>
+                    <td> ${alumnos[i].campus}</td>
+                    <td> ${alumnos[i].calA}</td>
+                    <td> ${alumnos[i].calB}</td>
+                </tr>-->
+            </tbody>
+
+
+        </table>
+   </section>
+
+   <footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.facebook.com/hugo.romualdo/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://twitter.com/hgromualdo?t=w29RbdNk1TW4q-McBiZD4A&s=09"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://instagram.com/hgromualdo11?igshid=ZDdkNTZiNTM="
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.linkedin.com/in/hugo-romualdo-ramírez"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-white p-3" style="background-color: #285943;">
+      © 2023 Universidad Latinoamericana
+    </div>
+    <!-- Copyright -->
+  </footer>
+    
+   <script src="scripts/register.js"></script>
+   <!--<script src="scripts/display.js"></script>-->
+    
+</body>
+</html>

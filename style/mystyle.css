@@ -1,0 +1,89 @@
+/*globales*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F7F9F7;
+}
+/*nav*/
+nav.menu{
+    display: flex;
+    /*flex-direction: row;*/
+    /*align-items: right;*/
+    padding: 10px;
+    justify-content: space-between;
+    background-color: #285943;
+    font-size: 20px;
+}
+.logo{
+
+    height: 80px;
+    /*display:none;*/
+    position: relative;
+    top:0px;
+}
+.nav-link{
+    color: white;
+    font-size: 20px;
+    
+}
+
+a{
+    color:white;
+    font-family:"Arial Narrow Bold";
+    font-size: 20px;
+    padding: 5px;
+
+    
+}
+
+/*Registro*/
+
+.formulario label{
+    text-align: left;
+    width: 80%;
+    font-family: arial;
+    margin-top: 5px;   
+}
+
+.btn-success{
+    margin-top: 20px;
+}
+.container h2{
+    margin-top: 50px;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-bottom: 50px;
+    
+}
+header{
+    margin-top: 20px;
+}
+.alert-danger{
+    width: 100%;
+    padding: 1%;
+    
+}
+.table td, tr{
+    border-radius: 5px;
+    border-color: black;
+}
+.d-block .w100{
+    max-width: 80%;
+    
+}
+.imagen{
+    margin-top: 10px;
+}
+.link-home{
+    size: 10px;
+
+}
+
+
+
+
